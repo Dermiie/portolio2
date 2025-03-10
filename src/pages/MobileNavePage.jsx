@@ -5,18 +5,15 @@ import { NavLink } from "react-router";
 
 function MobileNavePage({mobileNavHandler}) {
   return (
-    <div onClick={mobileNavHandler} className=" bg-stone-200 flex gap-12 flex-col items-center justify-center">
-      <ul className="flex gap-6 items-center mt-20">
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex" >
+    <div onClick={mobileNavHandler} className="flex flex-col items-center justify-center gap-12  bg-stone-200">
+      <ul className="flex items-center gap-6 mt-20">
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full  hover:bg-blue-400 hover:text-white" >
         <BiLogoLinkedin />
         </li>
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex" >
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full  hover:bg-blue-400 hover:text-white" >
         <BiLogoGmail/>
         </li>
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex">
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full  hover:bg-blue-400 hover:text-white">
         <BiLogoGithub/>
         </li>
       </ul>

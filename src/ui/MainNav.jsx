@@ -23,17 +23,14 @@ function MainNav() {
           <NavLink to={'/contact'}   className={({ isActive }) =>`text-lg font-semibold hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 border-b-4' : ''}`}>Contact</NavLink>
         </li>
       </ul>
-      <ul className="flex gap-6 items-center">
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex" >
+      <ul className="flex items-center gap-6">
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full hover:bg-blue-400 hover:text-white" >
         <BiLogoLinkedin />
         </li>
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex" >
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full hover:bg-blue-400 hover:text-white" >
         <BiLogoGmail/>
         </li>
-        <li  className=" hover:bg-blue-400 hover:text-white
-         text-lg transition-all duration-300 p-2 rounded-full items-center flex">
+        <li  className="flex items-center p-2 text-lg transition-all duration-300 rounded-full hover:bg-blue-400 hover:text-white">
         <BiLogoGithub/>
         </li>
       </ul>
