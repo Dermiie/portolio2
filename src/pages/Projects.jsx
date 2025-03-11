@@ -1,5 +1,11 @@
 function Projects() {
-  return <div>project</div>;
+  return <div>
+    <header>Recent Project</header>
+    <div>
+      
+    </div>
+
+  </div>;
 }
 
 export default Projects;
