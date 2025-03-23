@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+
 import Button from "../ui/Button";
 import { BiLogoGithub } from "react-icons/bi";
 
@@ -42,7 +42,7 @@ function Projects() {
         </section>
       </figure>
     
-      <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
+      <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 mb-6">
       
         <img src="/Worldwise.png" className="md:w-1/2 object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="worldwise-app"></img>
         <section  className="flex flex-col gap-4 p-6">
