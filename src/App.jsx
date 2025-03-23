@@ -1,27 +1,38 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
-import AppLayout from './ui/AppLayout';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Projects from './pages/Projects';
-import Skills from './pages/Skills';
-import PageNotFound from './pages/PageNotFound';
-import Home from './pages/Home';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import AppLayout from "./ui/AppLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import PageNotFound from "./pages/PageNotFound";
+import PageTransition from "./ui/PageTransition";
 
-function App() {
+const AnimatedRoutes = () => {
+  const location = useLocation(); // Get current route
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route element={<AppLayout />}>
+          <Route index element={<Navigate replace to="home" />} />
+          <Route path="home" element={<PageTransition><Home /></PageTransition>} />
+          <Route path="about" element={<PageTransition><About /></PageTransition>} />
+          <Route path="contact" element={<PageTransition><Contact /></PageTransition>} />
+          <Route path="projects" element={<PageTransition><Projects /></PageTransition>} />
+        </Route>
+        <Route path="*" element={<PageTransition><PageNotFound /></PageTransition>} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
+
+const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<AppLayout></AppLayout>}>
-          <Route index element={<Navigate replace to={'home'}></Navigate>} />
-          <Route path="home" element={<Home></Home>} />
-          <Route path="about" element={<About></About>} />
-          <Route path="contact" element={<Contact></Contact>} />
-          <Route path="projects" element={<Projects></Projects>} />
-        </Route>
-        <Route path="*" element={<PageNotFound></PageNotFound>} />
-      </Routes>
+      <AnimatedRoutes />
     </BrowserRouter>
   );
-}
+};
 
 export default App;

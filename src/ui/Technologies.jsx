@@ -1,6 +1,6 @@
 function Technologies() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 md:grid md:grid-cols-3 md:gap-4">
      <div className="flex flex-col justify-center border  rounded-sm border-stone-300 py-12 items-center" >
      <img src="/js.png" className="h-16 w-16" alt="javascript"></img>
      <p>Javascript</p>

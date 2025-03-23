@@ -11,25 +11,27 @@ if (state.succeeded) {
   return <p>Thanks for joining!</p>;
 }
 
-  return <div>
-    <h1  className="text-2xl my-4 font-extrabold text-center">Get in touch</h1>
-    <div className="flex flex-col mb-10 gap-3">
-    <p className="tracking-tight">Have a project in mind or just want to say hello? I&apos;d love to hear from you! Feel free to reach out, and let&apos;s build something great together. 🚀</p>
-    <div className="flex gap-1 ">
+  return <div className="md:flex md:gap-4 md:pt-8">
+    <div className="md:w-1/2">
+      <h1  className="text-2xl my-4 font-extrabold md:text-start md:w-[80%] text-center">Get in touch</h1>
+      <div className="flex flex-col mb-10 gap-3 md:gap-8  md:w-[80%] ">
+      <p className="tracking-tight">Have a project in mind or just want to say hello? I&apos;d love to hear from you! Feel free to reach out, and let&apos;s build something great together. 🚀</p>
+      <div className="flex gap-1 ">
 
-      <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-     <BiLogoGithub className="text-xl  text-stone-600"></BiLogoGithub>
-      </div>
-      <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-     <BiLogoGmail className="text-xl text-stone-600"></BiLogoGmail>
-      </div>
-      <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-     <BiLogoLinkedin className="text-xl  text-stone-600"></BiLogoLinkedin>
+        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <BiLogoGithub className="text-xl  text-stone-600"></BiLogoGithub>
+        </div>
+        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <BiLogoGmail className="text-xl text-stone-600"></BiLogoGmail>
+        </div>
+        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <BiLogoLinkedin className="text-xl  text-stone-600"></BiLogoLinkedin>
+        </div>
       </div>
     </div>
     </div>
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-    <p  className="text-lg tracking-tight text-blue-400">Send a message</p>
+    <p  className="tracking-tighter text-blue-400">Send a message / Leave a review 😉</p>
     <div className="flex flex-col md:flex-row gap-4 w-full">   
      <div className="md:w-[50%]">
       <input type="text" id="name" name="name" placeholder="Name" className={`${inputStyles} w-full`} required></input>

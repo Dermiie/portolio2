@@ -1,10 +1,10 @@
-
 import Button from "../ui/Button";
 import { BiLogoGithub } from "react-icons/bi";
 
 function Projects() {
-  return <div>
-    <header className="text-2xl my-4 font-extrabold text-center">Recent Projects</header>
+  return <div className="py-4">
+    <header className="text-2xl mb-4 font-extrabold text-center">Recent Projects</header>
+    <p className="mb-4">Here are some of the projects I&apos;ve worked on, showcasing my skills in front-end development, design implementation, and problem-solving. Each project reflects my passion for creating seamless and engaging user experiences. 🚀</p>
     <div className="flex flex-col gap-6">
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
@@ -59,6 +59,7 @@ function Projects() {
       </figure>
       
     </div>
+    <Button type={'primary'}>View Resume</Button>
 
   </div>;
 }
