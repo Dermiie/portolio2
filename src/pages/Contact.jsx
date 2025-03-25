@@ -1,6 +1,7 @@
 import Button from "../ui/Button";
-import { BiLogoGithub, BiLogoGmail, BiLogoLinkedin } from "react-icons/bi"
+import { BiLogoGithub, BiLogoInstagram, BiLogoLinkedin } from "react-icons/bi"
 import { useForm, ValidationError } from '@formspree/react';
+import { Link } from "react-router";
 
 
 function Contact() {
@@ -18,15 +19,15 @@ if (state.succeeded) {
       <p className="tracking-tight">Have a project in mind or just want to say hello? I&apos;d love to hear from you! Feel free to reach out, and let&apos;s build something great together. 🚀</p>
       <div className="flex gap-1 ">
 
-        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <Link to={'https://github.com/Dermiie'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
         <BiLogoGithub className="text-xl  text-stone-600"></BiLogoGithub>
-        </div>
-        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-        <BiLogoGmail className="text-xl text-stone-600"></BiLogoGmail>
-        </div>
-        <div className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        </Link>
+        <Link to={'https://www.instagram.com/dermiie/?hl=en'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <BiLogoInstagram className="text-xl text-stone-600"></BiLogoInstagram>
+        </Link>
+        <Link to={'https://www.linkedin.com/in/demi-oyeniyi-82074624'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
         <BiLogoLinkedin className="text-xl  text-stone-600"></BiLogoLinkedin>
-        </div>
+        </Link>
       </div>
     </div>
     </div>

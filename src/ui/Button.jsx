@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 
 function Button({children, disabled, to, type, onClick}) {
-const base = " font-semibold text-sm tracking-wide uppercase transition-colors duration-300 bg-blue-400 rounded-lg text-stone-800 hover:bg-blue-400 focus:bg-blue-400 focus:ring focus:ring-offset-2 focus:ring-blue-400 focus:outline-none  disabled:cursor-not-allowed"
+const base = " font-semibold text-sm tracking-wide uppercase transition-colors duration-300 bg-blue-400 rounded-lg text-stone-800 hover:bg-blue-300 focus:bg-blue-400 focus:ring focus:ring-offset-2 focus:ring-blue-400 focus:outline-none  disabled:cursor-not-allowed"
 
 const styles = {
   primary: base + ' px-4 py-3 md:px-6 md:py-4',

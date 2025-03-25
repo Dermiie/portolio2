@@ -1,7 +1,12 @@
+import { Link } from "react-router";
 import Button from "../ui/Button";
 import { BiLogoGithub } from "react-icons/bi";
 
+
+
 function Projects() {
+ 
+
   return <div className="py-4">
     <header className="text-2xl mb-4 font-extrabold text-center">Recent Projects</header>
     <p className="mb-4">Here are some of the projects I&apos;ve worked on, showcasing my skills in front-end development, design implementation, and problem-solving. Each project reflects my passion for creating seamless and engaging user experiences. 🚀</p>
@@ -9,16 +14,20 @@ function Projects() {
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
       
-       <img src="/Fastreactpizza.png" className="md:w-1/2 object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
+       <div className="md:w-1/2">
+        <Link to={'https://demi-fast-pizza.netlify.app/'}>
+        <img src="/Fastreactpizza.png" className="h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
+        </Link>
+       </div>
       
       
     
-       <section className="flex flex-col gap-4 p-6">
+       <section className="flex flex-col md:w-1/2 gap-4 p-6">
        <span className="text-center text-sm text-stone-500 tracking-tight">Featured Project</span>
         <h1 className="text-lg font-bold text-blue-400">FAST PIZZA APP</h1>
         <p className="tracking-tight">This simple web application is built with React.js, Tailwind CSS, and React Redux for global state management. It enables customers to order pizzas, set priorities on their orders, and have them delivered efficiently.</p>
-        <div className="flex flex-col md-flex-row gap-2">
-        <Button type={'small'}>Visit Project</Button>
+        <div className="flex gap-2">
+        <Button type={'small'} to={'https://demi-fast-pizza.netlify.app/'}>Visit Project</Button>
         <Button type={'small'}>
           <span>Go to github</span><BiLogoGithub />
           </Button>
@@ -28,8 +37,14 @@ function Projects() {
     
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
-      <img src="/Usepopcorn.png" className="md:w-1/2 object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="usepopcorn-app"></img>
-        <section  className="flex flex-col gap-4 p-6">
+      
+       <div className="md:w-1/2 ">
+        <Link to={'https://usepopcorn-demi.netlify.app/'}>
+           <img src="/Usepopcorn.png" className="h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="usepopcorn-app"></img>
+        </Link>
+       </div>
+      
+        <section  className="flex flex-col md:w-1/2  gap-4 p-6">
         <span className="text-center text-sm text-stone-500 tracking-tight">Featured Project</span>
         <h1 className="text-lg font-bold text-blue-400">USE POPCORN</h1>
         <p className="tracking-tight">The UsePopcorn web app is a simple and minimalist platform that enables users to research movies, leave reviews, and provide ratings. It is built with React.js and styled using Vanilla css.</p>
