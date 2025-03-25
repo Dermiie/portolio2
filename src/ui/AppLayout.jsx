@@ -8,7 +8,7 @@ function AppLayout() {
       <Header></Header>
 
       
-        <main className=" md:w-[75%] mx-auto overflow-auto px-4 scrollbar-hide">
+        <main className=" md:w-[75%] mx-auto overflow-auto flex justify-center px-4 scrollbar-hide">
           <Outlet></Outlet>
         </main>
 

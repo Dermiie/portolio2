@@ -9,7 +9,11 @@ const [state, handleSubmit] = useForm("xyzewbpj");
 const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2'
 
 if (state.succeeded) {
-  return <p>Thanks for joining!</p>;
+  return <div className="flex h-full justify-center items-center">
+   <div className="mx-auto">
+     <p>Thanks for reaching out !</p>;
+   </div>
+  </div>
 }
 
   return <div className="md:flex md:gap-4 md:pt-8">

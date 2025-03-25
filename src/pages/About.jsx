@@ -24,7 +24,7 @@ function About() {
   <p className=" tracking-tight mb-8">These technologies form the backbone of my expertise, meticulously honed through hands-on projects, real-world problem-solving, and an unwavering drive for growth.</p>
   <Technologies></Technologies>
 </div>
-<div className="flex flex-col">
+<div className="flex flex-col mb-4">
   <header  className="text-center text-lg mb-6 font-bold">Experience</header>
   <p className=" tracking-tight text-center"></p>
   <Experience></Experience>
