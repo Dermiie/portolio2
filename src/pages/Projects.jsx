@@ -7,16 +7,16 @@ import { BiLogoGithub } from "react-icons/bi";
 function Projects() {
  
 
-  return <div className="py-4">
+  return <div className="py-8">
     <header className="text-2xl mb-4 font-extrabold text-center">Recent Projects</header>
-    <p className="mb-4">Here are some of the projects I&apos;ve worked on, showcasing my skills in front-end development, design implementation, and problem-solving. Each project reflects my passion for creating seamless and engaging user experiences. 🚀</p>
-    <div className="flex flex-col gap-6">
+    <p className="mb-8">Here are some of the projects I&apos;ve worked on, showcasing my skills in front-end development, design implementation, and problem-solving. Each project reflects my passion for creating seamless and engaging user experiences. 🚀</p>
+    <div className="flex flex-col gap-12">
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
       
        <div className="md:w-1/2">
         <Link to={'https://demi-fast-pizza.netlify.app/'}>
-        <img src="/Fastreactpizza.png" className="h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
+        <img src="/Fastreactpizza.png" className="h-full object-contain md:object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
         </Link>
        </div>
       
