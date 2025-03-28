@@ -14,12 +14,12 @@ function Projects() {
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
       
-       <div className="md:w-1/2">
+       <div className="md:w-1/2 md:items-center md:justify-center overflow-hidden flex items-start">
         <Link to={'https://demi-fast-pizza.netlify.app/'}>
-        <img src="/Fastreactpizza.png" className="h-full object-contain md:object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
+        <img src="/Fastreactpizza.png" className="max-h-full h-auto object-contain md:object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer" alt="fastreactpizza-app"></img>
         </Link>
        </div>
-      
+       
       
     
        <section className="flex flex-col md:w-1/2 gap-4 p-6">
@@ -38,9 +38,9 @@ function Projects() {
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 ">
       
       
-       <div className="md:w-1/2 ">
+       <div className="md:w-1/2 md:items-center md:justify-center overflow-hidden flex items-start">
         <Link to={'https://usepopcorn-demi.netlify.app/'}>
-           <img src="/Usepopcorn.png" className="h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="usepopcorn-app"></img>
+           <img src="/Usepopcorn.png" className="max-h-full h-auto object-contain md:object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"alt="usepopcorn-app"></img>
         </Link>
        </div>
       
@@ -59,9 +59,9 @@ function Projects() {
     
       <figure className=" md:flex border-2 rounded-lg border-stone-400 p-3 mb-6">
       
-       <div className="md:w-1/2">
+       <div className="md:w-1/2 md:items-center md:justify-center overflow-hidden flex items-start">
         <Link to={'https://demi-worldwise.netlify.app/'}>
-         <img src="/Worldwise.png" className="h-full object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="worldwise-app"></img>
+         <img src="/Worldwise.png" className="max-h-full h-auto object-contain md:object-cover md:grayscale hover:grayscale-0 transition-all duration-700 hover:cursor-pointer"  alt="worldwise-app"></img>
         </Link>
        </div>
         <section  className="flex flex-col md:w-1/2 gap-4 p-6">
