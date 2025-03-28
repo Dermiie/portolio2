@@ -79,7 +79,7 @@ function Projects() {
       
     </div>
    <div className="mb-3">
-     <Button type={'primary'} to={'file:///C:/Users/44744/Documents/CV%20DEMI%20(2).pdf'}>View Resume</Button>
+     <Button type={'primary'} to={'/contact'}>Contact Me</Button>
    </div>
 
   </div>;
