@@ -9,7 +9,7 @@ function NavLinks() {
         
         <li>
 
-          <NavLink to={'/projects'}  className={({ isActive }) =>`text-lg  hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`}>Project</NavLink>
+          <NavLink to={'/projects'}  className={({ isActive }) =>`text-lg  hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`}>Projects</NavLink>
         </li>
         <li>
           <NavLink to={'/contact'}   className={({ isActive }) =>`text-lg  hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`}>Contact</NavLink>

@@ -1,20 +1,29 @@
 import Button from "../ui/Button";
-import { BiLogoGithub, BiLogoInstagram, BiLogoLinkedin } from "react-icons/bi"
+import { BiLogoGithub, BiLogoInstagram, BiLogoLinkedin, BiCheckCircle } from "react-icons/bi"
 import { useForm, ValidationError } from '@formspree/react';
 import { Link } from "react-router";
+import { useEffect, useState } from "react";
 
+const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2'
 
 function Contact() {
 const [state, handleSubmit] = useForm("xyzewbpj");
-const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2'
+const [status, setStatus] = useState("initial");
 
-if (state.succeeded) {
-  return <div className="flex h-full justify-center items-center">
-   <div className="mx-auto">
-     <p>Thanks for reaching out !</p>;
-   </div>
-  </div>
-}
+
+ useEffect(() => {
+    if (state.succeeded) {
+      setStatus("success");
+
+      // Reset back to "initial" after 10s
+      const timer = setTimeout(() => {
+        setStatus("initial");
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [state.succeeded]);
+
 
   return <div className="md:flex md:gap-4 md:pt-8">
     <div className="md:w-1/2">
@@ -23,49 +32,97 @@ if (state.succeeded) {
       <p className="tracking-tight">Have a project in mind or just want to say hello? I&apos;d love to hear from you! Feel free to reach out, and let&apos;s build something great together. 🚀</p>
       <div className="flex gap-1 ">
 
-        <Link to={'https://github.com/Dermiie'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-        <BiLogoGithub className="text-xl  text-stone-600"></BiLogoGithub>
+        <Link to={'https://github.com/Dermiie'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
+        <BiLogoGithub className="text-xl text-stone-600"></BiLogoGithub>
         </Link>
-        <Link to={'https://www.instagram.com/dermiie/?hl=en'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
+        <Link to={'https://www.instagram.com/dermiie/?hl=en'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
         <BiLogoInstagram className="text-xl text-stone-600"></BiLogoInstagram>
         </Link>
-        <Link to={'https://www.linkedin.com/in/demi-oyeniyi-82074624'} className="p-2 border-2 border-stone-400 rounded-md inline-flex">
-        <BiLogoLinkedin className="text-xl  text-stone-600"></BiLogoLinkedin>
+        <Link to={'https://www.linkedin.com/in/demi-oyeniyi-82074624'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
+        <BiLogoLinkedin className="text-xl text-stone-600"></BiLogoLinkedin>
         </Link>
       </div>
     </div>
     </div>
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-    <p  className="tracking-tighter text-blue-400">Send a message / Leave a review 😉</p>
-    <div className="flex flex-col md:flex-row gap-4 w-full">   
-     <div className="md:w-[50%]">
-      <input type="text" id="name" name="name" placeholder="Name" className={`${inputStyles} w-full`} required></input>
-       <ValidationError 
-        prefix="Name" 
-        field="name"
-        errors={state.errors}
-      />
-     </div>
-     <div className="md:w-[50%]">
-     <input id="email" name="email" type="email" placeholder="Email-address" className={`${inputStyles}`} required></input>
-     <ValidationError 
-        prefix="Email" 
-        field="email"
-        errors={state.errors}
-      />
-     </div>
+       <div className="flex flex-col items-center w-full">
+      {/* ✅ Success Message */}
+      {status === "success" && (
+        <div className="flex flex-col items-center justify-center w-2/3 gap-3 p-6 rounded-lg shadow bg-stone-100">
+          <BiCheckCircle className="text-5xl text-blue-400" />
+          <p className="text-lg font-medium text-gray-700">
+            Thanks for reaching out 👍
+          </p>
+        </div>
+      )}
+
+      {/* ✅ Initial Form */}
+      {status === "initial" && (
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col w-full max-w-2xl gap-5"
+        >
+          <p className="font-semibold tracking-tight text-blue-400">
+            Send a message / Leave a review 😉
+          </p>
+
+          {/* Name + Email */}
+          <div className="flex flex-col gap-4 md:flex-row">
+            <div className="md:w-1/2">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                className={`${inputStyles} w-full`}
+                required
+              />
+              <ValidationError
+                prefix="Name"
+                field="name"
+                errors={state.errors}
+              />
+            </div>
+
+            <div className="md:w-1/2">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email address"
+                className={`${inputStyles} w-full`}
+                required
+              />
+              <ValidationError
+                prefix="Email"
+                field="email"
+                errors={state.errors}
+              />
+            </div>
+          </div>
+
+          {/* Message */}
+          <div>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows={5}
+              className={`${inputStyles} w-full`}
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="w-40">
+            <Button type="primary">Submit</Button>
+          </div>
+        </form>
+      )}
     </div>
-     <textarea id="message"
-        name="message" placeholder="Message" rows={5} className={`${inputStyles}`} ></textarea>
-        <ValidationError 
-        prefix="Message" 
-        field="message"
-        errors={state.errors}
-      />
-     <div className="w-[40%]">
-     <Button type={'primary'}>Submit</Button>
-     </div>
-    </form>
     
   </div>;
 }
