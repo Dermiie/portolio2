@@ -14,7 +14,7 @@ function Home() {
       <div className="mt-3">
         <p className="w-[85%] md:w-[70%]text-lg tracking-tight">A frontend developer with an eye for clean code and user centric applications, I create seamless user interfaces that are both functional and visually compelling.</p>
         <div className="mt-2 font-bold">
-          <Link to={'/about'} className="transition-all duration-300 hover:text-blue-400">Want to know more about me <span><BiRightArrowAlt         className="text-3xl font-bold text-blue-400"/></span></Link>
+          <Link to={'/about'} className="transition-all duration-300 hover:text-blue-400 dark:text-blue-400">Want to know more about me <span><BiRightArrowAlt         className="text-3xl font-bold text-blue-400"/></span></Link>
         </div>   
       </div>
     </div>

@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Link } from "react-router";
 import { useEffect, useState } from "react";
 
-const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2'
+const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2 dark:bg-stone-800 dark:text-stone-300 dark:focus:ring-blue-400 dark:focus:ring-offset-stone-900 border-2 border-stone-300 dark:border-stone-600';
 
 function Contact() {
 const [state, handleSubmit] = useForm("xyzewbpj");
@@ -38,7 +38,7 @@ const [status, setStatus] = useState("initial");
         <Link to={'https://www.instagram.com/dermiie/?hl=en'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
         <BiLogoInstagram className="text-xl text-stone-600"></BiLogoInstagram>
         </Link>
-        <Link to={'https://www.linkedin.com/in/demi-oyeniyi-82074624'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
+        <Link to={'https://www.linkedin.com/in/demilade-oyeniyi-820746246'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
         <BiLogoLinkedin className="text-xl text-stone-600"></BiLogoLinkedin>
         </Link>
       </div>
@@ -47,7 +47,7 @@ const [status, setStatus] = useState("initial");
        <div className="flex flex-col items-center w-full">
       {/* ✅ Success Message */}
       {status === "success" && (
-        <div className="flex flex-col items-center justify-center w-2/3 gap-3 p-6 rounded-lg shadow bg-stone-100">
+        <div className="flex flex-col items-center justify-center w-2/3 gap-3 p-6 rounded-lg shadow bg-stone-100 dark:bg-stone-800 dark:text-stone-300">
           <BiCheckCircle className="text-5xl text-blue-400" />
           <p className="text-lg font-medium text-gray-700">
             Thanks for reaching out 👍

@@ -1,5 +1,6 @@
 import MainNav from "./MainNav";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 
 function Header() {
   return <>

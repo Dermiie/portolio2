@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 function AppLayout() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] h-screen">
+    <div className="grid grid-rows-[auto_1fr_auto] h-screen dark:bg-stone-950 dark:text-stone-300">
       <Header></Header>
 
       
