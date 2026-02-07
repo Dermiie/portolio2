@@ -25,7 +25,7 @@ function Home() {
 
    
   </div>
-  <div className="flex flex-col gap-20">
+  <div className="flex flex-col gap-20 pb-20">
 
     <About />
   <Projects />
