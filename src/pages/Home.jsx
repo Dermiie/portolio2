@@ -10,7 +10,7 @@ function Home() {
   return <>
   <div className="flex flex-col justify-center h-full gap-3 px-8 overflow-scroll md:flex-row md:gap-10 md:items-center ">
     <div className="flex justify-center w-32 h-32 mb-8 overflow-hidden rounded-full md:self-center md:justify-center md:w-1/2 md:h-3/4 md:order-2 ring md:ring-2 md:ring-offset-0 ring-offset-8 ring-blue-400">
-      <img className="object-cover pt-8 md:object-center md:self-center" src="/Demi.jpg" alt="Demi"></img>
+      <img className="object-center md:self-center" src="/Demi.jpg" alt="Demi"></img>
     </div>
     <div className="md:w-1/2">
       <h1 className="mb-4 text-xl font-extrabold">HI THERE 👋, I&apos;M </h1>
