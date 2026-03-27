@@ -44,31 +44,27 @@ const projects = [
 function Projects() {
   return (
     <div className="pt-28">
-      <h3 className="mb-6 text-4xl font-bold tracking-tight font-display text-primary-900 text-start">
+      <h3 className="mb-6 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start">
         Selected <span className=" text-primary-600">Projects</span>
       </h3>
 
-      <div className="grid grid-cols-2 gap-10 px-10 mb-24">
+      <div className="flex flex-col gap-10 mb-24 md:px-10 md:grid md:grid-cols-2">
         {projects.map((project, i) => (
           <figure
             key={i}
-            className="p-3 border-[0.6px] border-primary-50 rounded-lg"
+            className="p-3 border-[0.6px] border-primary-900 rounded-lg"
           >
             <div className="flex items-start w-full">
               <Link to={project.live} className="w-full overflow-hidden">
                 <img
                   src={project.image}
-                  className={`transition-all duration-700 h-72 md:object-cover md:grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-110 ${
-                    project.object === 'contain'
-                      ? 'object-contain'
-                      : 'object-cover w-full'
-                  }`}
+                  className="object-cover w-full transition-all duration-700 h-72 md:object-cover md:grayscale hover:grayscale-0 hover:cursor-pointer hover:scale-110"
                   alt={project.alt}
                 />
               </Link>
             </div>
 
-            <section className="flex flex-col gap-4 p-6">
+            <section className="flex flex-col gap-4 p-2 md:p-6">
               <h1 className="text-lg font-bold font-display text-primary-900">
                 {project.title}
               </h1>
@@ -103,7 +99,7 @@ function Projects() {
 
       {/*EXPERIENCE*/}
       <div className="flex flex-col">
-        <h3 className="mb-4 text-2xl font-bold tracking-tight font-display text-primary-900 text-start">
+        <h3 className="mb-2 text-xl font-bold tracking-tight md:mb-4 md:text-2xl font-display text-primary-900 text-start">
           Experience
         </h3>
         <p className="tracking-tight text-center "></p>

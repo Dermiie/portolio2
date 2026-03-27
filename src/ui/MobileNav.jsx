@@ -13,14 +13,20 @@ function MobileNav() {
 
   return (
     <div>
-      <div className="flex p-4 justify-between items-center w-[90%] m-auto bg-white rounded-lg mt-4 drop-shadow-md dark:bg-stone-800 dark:text-stone-300">
-        <NavLink to={'/'}>DEMI</NavLink>
-        <div className="transition-all duration-300" onClick={mobileNavHandler}>
-          {!isOpen ? (
-            <BiMenuAltRight className="text-2xl" />
-          ) : (
-            <BiXCircle className="text-2xl" />
-          )}
+      <div className="fixed top-0 left-0 z-50 w-full">
+        <div className="flex p-4 justify-between items-center w-[90%] m-auto bg-white rounded-lg mt-4 drop-shadow-md dark:bg-stone-800 dark:text-stone-300">
+          <NavLink to={'/'}>DEMI</NavLink>
+
+          <div
+            className="transition-all duration-300"
+            onClick={mobileNavHandler}
+          >
+            {!isOpen ? (
+              <BiMenuAltRight className="text-2xl" />
+            ) : (
+              <BiXCircle className="text-2xl" />
+            )}
+          </div>
         </div>
       </div>
       {isOpen && (

@@ -40,17 +40,17 @@ const contactData = [
 function Contact() {
   return (
     <>
-      <div className="grid w-full grid-cols-2 gap-12 pt-28">
+      <div className="flex flex-col w-full gap-12 md:grid md:grid-cols-2 pt-28">
         <section className="flex flex-col gap-6 text-start">
           <header>
-            <p className="text-6xl font-extrabold font-display text-primary-900">
+            <p className="text-3xl font-extrabold font-display md:text-6xl lg:text-6xl text-primary-900">
               Let&apos;s
             </p>
-            <p className="mb-4 text-6xl font-extrabold font-display text-primary-600">
+            <p className="text-3xl font-extrabold font-display md:text-6xl lg:text-6xl text-primary-600">
               Connect
             </p>
           </header>
-          <p className="w-[70%]">
+          <p className="md:w-[70%]">
             Ready to come on board. Drop me a message and i&apos;ll get back
             between 24 to 48 hours
           </p>
@@ -87,7 +87,7 @@ function Contact() {
         </section>
         <section>
           <header className="mb-4">
-            <h1 className="mb-2 text-2xl font-bold tracking-tight font-display text-primary-900 text-start">
+            <h1 className="mb-2 text-xl font-bold tracking-tight font-display text-primary-900 text-start">
               Send a message
             </h1>
             <p>Fill in the details, i&apos;ll get back to you</p>

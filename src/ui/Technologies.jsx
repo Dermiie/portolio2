@@ -52,8 +52,8 @@ const techStack = {
 
 function Technologies() {
   return (
-    <div className="grid grid-cols-3 p-6 bg-primary-50">
-      <div>
+    <div className="flex flex-col md:grid md:grid-cols-3 bg-primary-50">
+      <div className="border-b-[0.8px] border-primary-800 p-6 ">
         <header className="flex items-center justify-start gap-4 mb-6 font-semibold uppercase font-display">
           <span>
             <HiOutlineDesktopComputer size={24} className="text-primary-600" />
@@ -69,7 +69,7 @@ function Technologies() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="border-b-[0.8px] border-primary-800 p-6">
         <header className="flex items-center justify-start gap-4 mb-6 font-semibold uppercase font-display">
           <span>
             <TbDatabase size={24} className="text-primary-600" />
@@ -85,7 +85,7 @@ function Technologies() {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="border-b-[0.8px] border-primary-800 p-6 ">
         <header className="flex items-center justify-start gap-4 mb-6 font-semibold uppercase font-display">
           <span>
             <HiOutlineServer size={24} className="text-primary-600" />

@@ -12,17 +12,17 @@ const expertise = [
 function About() {
   return (
     <div className="flex flex-col gap-24 pt-28">
-      <div className="grid grid-cols-3">
-        <div className="flex flex-col col-span-2">
-          <h3 className="mb-4 text-4xl font-bold tracking-tight font-display text-primary-900 text-start">
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-0">
+        <div className="flex flex-col md:col-span-2">
+          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start">
             Bringing designs to life{' '}
             <span className="block text-primary-600">
               with code and creativity!
             </span>
           </h3>
 
-          <div className="flex items-center justify-start gap-4 px-4">
-            <div className="mb-4 overflow-hidden rounded-full size-32 ring ring-offset-2 ring-primary-600">
+          <div className="flex items-center justify-start gap-4 px-2 md:px-4">
+            <div className="mb-4 overflow-hidden rounded-full size-24 md:size-32 ring ring-offset-2 ring-primary-600">
               <img src="/Demi.jpg" alt="Demi"></img>
             </div>
           </div>
@@ -37,7 +37,7 @@ function About() {
           </p>
         </div>
         <div>
-          <h3 className="mb-4 text-4xl font-bold tracking-tight font-display text-primary-900 text-start">
+          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start">
             Core Expertise
           </h3>
           <ul className="space-y-5">
@@ -52,7 +52,7 @@ function About() {
         </div>
       </div>
       <div className="flex flex-col">
-        <h3 className="mb-4 text-2xl font-bold tracking-tight font-display text-primary-900 text-start">
+        <h3 className="mb-4 text-xl font-bold tracking-tight md:text-2xl font-display text-primary-900 text-start">
           Technologies
         </h3>
 

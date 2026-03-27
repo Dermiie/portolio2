@@ -7,7 +7,7 @@ function NavLinks() {
         <NavLink
           to={'/about'}
           className={({ isActive }) =>
-            `hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400' : ''}`
+            `hover:text-primary-600 active:text-primary-600 transition-all duration-300 ${isActive ? 'text-primary-600' : ''}`
           }
         >
           About
@@ -18,7 +18,7 @@ function NavLinks() {
         <NavLink
           to={'/projects'}
           className={({ isActive }) =>
-            ` hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`
+            ` hover:text-primary-600 active:text-primary-600 transition-all duration-300 ${isActive ? 'text-primary-600 ' : ''}`
           }
         >
           Projects
@@ -28,7 +28,7 @@ function NavLinks() {
         <NavLink
           to={'/contact'}
           className={({ isActive }) =>
-            ` hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`
+            ` hover:text-primary-600 active:text-primary-600 transition-all duration-300 ${isActive ? 'text-primary-600 ' : ''}`
           }
         >
           Contact

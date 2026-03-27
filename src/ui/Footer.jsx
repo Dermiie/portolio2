@@ -5,14 +5,14 @@ import SocialLinks from './SocialLinks';
 function Footer() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center gap-8 py-28">
+      <div className="flex flex-col items-center justify-center gap-8 pt-28">
         <p className="flex flex-col items-start text-sm tracking-wider uppercase">
           Available for opportunites
         </p>
         <main>
-          <p className="text-6xl font-extrabold text-center font-display text-primary-900">
+          <p className="text-3xl font-extrabold text-center md:text-6xl font-display text-primary-900">
             Let&apos;s build <br /> something <br />
-            <span>remarkable</span>
+            <span className="text-primary-600">remarkable</span>
           </p>
         </main>
         <div className="flex items-end justify-end">
@@ -36,13 +36,13 @@ function Footer() {
             </Button>
           </div>
         </div>
+        <footer className="flex justify-between items-center py-8 px-4 md:px-12 border-t-[0.8px] border-primary-800 w-full">
+          <div>
+            <p> &copy;2026 Demilade Oyeniyi 🧙‍♂️</p>
+          </div>
+          <SocialLinks />
+        </footer>
       </div>
-      <footer className="flex justify-between px-12 border-t-[0.8px] border-primary-800">
-        <div className="flex items-center justify-center">
-          <p className="py-8"> &copy;2026 Demilade Oyeniyi 🧙‍♂️</p>
-        </div>
-        <SocialLinks />
-      </footer>
     </>
   );
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 function SocialLinks() {
   return (
-    <ul className="flex items-center gap-2 mr-4">
+    <ul className="flex items-center mr-4 md:gap-2">
       <Link
         to={'https://www.linkedin.com/in/demilade-oyeniyi-820746246'}
         className="flex items-center p-2 text-lg transition-all duration-300 rounded-full hover:bg-blue-400 hover:text-white"

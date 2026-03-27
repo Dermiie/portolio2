@@ -21,6 +21,9 @@ export default {
       backgroundImage: {
         hero: "url('background-gradient.png')",
       },
+      screens: {
+        lg: '1040px', // default is 1024px
+      },
       colors: {
         primary: {
           50: '#EDF7FD',
