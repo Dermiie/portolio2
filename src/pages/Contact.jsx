@@ -1,130 +1,143 @@
-import Button from "../ui/Button";
-import { BiLogoGithub, BiLogoInstagram, BiLogoLinkedin, BiCheckCircle } from "react-icons/bi"
-import { useForm, ValidationError } from '@formspree/react';
-import { Link } from "react-router";
-import { useEffect, useState } from "react";
+import { CgArrowTopRight } from 'react-icons/cg';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FiMail } from 'react-icons/fi';
+import Button from '../ui/Button';
+import { HiOutlineDownload } from 'react-icons/hi';
+import { RiSendPlaneLine } from 'react-icons/ri';
 
-const inputStyles = 'w-full outline-none rounded p-2 md:p-4 focus:ring focus:ring-blue-400 focus:ring-offset-2 dark:bg-stone-800 dark:text-stone-300 dark:focus:ring-blue-400 dark:focus:ring-offset-stone-900 border-2 border-stone-300 dark:border-stone-600';
+const contactData = [
+  {
+    id: 1,
+    name: 'Email',
+    value: 'Demioyeniyi@gmail.com',
+    icon: <FiMail />,
+    link: 'mailto:demioyeniyi@gmail.com',
+  },
+  {
+    id: 2,
+    name: 'LinkedIn',
+    value: 'linkedin.com/in/yourname',
+    icon: <FaLinkedin />,
+    link: 'https://linkedin.com/in/yourname',
+  },
+  {
+    id: 3,
+    name: 'X',
+    value: '@yourusername',
+    icon: <FaXTwitter />,
+    link: 'https://x.com/yourusername',
+  },
+  {
+    id: 4,
+    name: 'GitHub',
+    value: 'github.com/yourusername',
+    icon: <FaGithub />,
+    link: 'https://github.com/yourusername',
+  },
+];
 
 function Contact() {
-const [state, handleSubmit] = useForm("xyzewbpj");
-const [status, setStatus] = useState("initial");
-
-
- useEffect(() => {
-    if (state.succeeded) {
-      setStatus("success");
-
-      // Reset back to "initial" after 10s
-      const timer = setTimeout(() => {
-        setStatus("initial");
-      }, 5000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [state.succeeded]);
-
-
-  return <div className="md:flex md:gap-4 md:pt-8">
-    <div className="md:w-1/2">
-      <h1  className="text-2xl my-4 font-extrabold md:text-start md:w-[80%] text-center">Get in touch</h1>
-      <div className="flex flex-col mb-10 gap-3 md:gap-8  md:w-[80%] ">
-      <p className="tracking-tight">Have a project in mind or just want to say hello? I&apos;d love to hear from you! Feel free to reach out, and let&apos;s build something great together. 🚀</p>
-      <div className="flex gap-1 ">
-
-        <Link to={'https://github.com/Dermiie'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
-        <BiLogoGithub className="text-xl text-stone-600"></BiLogoGithub>
-        </Link>
-        <Link to={'https://www.instagram.com/dermiie/?hl=en'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
-        <BiLogoInstagram className="text-xl text-stone-600"></BiLogoInstagram>
-        </Link>
-        <Link to={'https://www.linkedin.com/in/demilade-oyeniyi-820746246'} className="inline-flex p-2 border-2 rounded-md border-stone-400">
-        <BiLogoLinkedin className="text-xl text-stone-600"></BiLogoLinkedin>
-        </Link>
-      </div>
-    </div>
-    </div>
-       <div className="flex flex-col items-center w-full">
-      {/* ✅ Success Message */}
-      {status === "success" && (
-        <div className="flex flex-col items-center justify-center w-2/3 gap-3 p-6 rounded-lg shadow bg-stone-100 dark:bg-stone-800 dark:text-stone-300">
-          <BiCheckCircle className="text-5xl text-blue-400" />
-          <p className="text-lg font-medium text-gray-700">
-            Thanks for reaching out 👍
-          </p>
-        </div>
-      )}
-
-      {/* ✅ Initial Form */}
-      {status === "initial" && (
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col w-full max-w-2xl gap-5"
-        >
-          <p className="font-semibold tracking-tight text-blue-400">
-            Send a message / Leave a review 😉
+  return (
+    <>
+      <div className="grid w-full grid-cols-2 gap-12 pt-28">
+        <section className="flex flex-col gap-6 text-start">
+          <header>
+            <p className="text-6xl font-extrabold font-display text-primary-900">
+              Let&apos;s
+            </p>
+            <p className="mb-4 text-6xl font-extrabold font-display text-primary-600">
+              Connect
+            </p>
+          </header>
+          <p className="w-[70%]">
+            Ready to come on board. Drop me a message and i&apos;ll get back
+            between 24 to 48 hours
           </p>
 
-          {/* Name + Email */}
-          <div className="flex flex-col gap-4 md:flex-row">
-            <div className="md:w-1/2">
+          <ul className="flex flex-col gap-2 ">
+            {contactData.map((data, i) => (
+              <li
+                key={i}
+                className="grid group w-full grid-cols-[auto_1fr_1fr] gap-4 py-2 items-center font-light border-b-[0.8px] border-primary-900"
+              >
+                <div className="group-hover:text-primary-600">{data.icon}</div>
+                <div>
+                  <p>{data.name}</p>
+                  <p>{data.value}</p>
+                </div>
+
+                <div className="justify-self-end group-hover:text-primary-600">
+                  <CgArrowTopRight />
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <div>
+            <Button type={'solid'}>
+              <div className="flex items-center justify-center gap-2">
+                <span>
+                  <HiOutlineDownload></HiOutlineDownload>
+                </span>
+                <p>Download CV</p>
+              </div>
+            </Button>
+          </div>
+        </section>
+        <section>
+          <header className="mb-4">
+            <h1 className="mb-2 text-2xl font-bold tracking-tight font-display text-primary-900 text-start">
+              Send a message
+            </h1>
+            <p>Fill in the details, i&apos;ll get back to you</p>
+          </header>
+          <form>
+            <div className="flex flex-col">
+              <label htmlFor="name">Name</label>
               <input
-                type="text"
-                id="name"
                 name="name"
-                placeholder="Name"
-                className={`${inputStyles} w-full`}
-                required
-              />
-              <ValidationError
-                prefix="Name"
-                field="name"
-                errors={state.errors}
-              />
+                type="text"
+                className="bg-transparent border-b-[0.7px] transition-all duration-300 py-2 border-primary-800 outline-none  focus:border-b-2 mb-4"
+              ></input>
             </div>
-
-            <div className="md:w-1/2">
+            <div className="flex flex-col">
+              <label htmlFor="email">Email</label>
               <input
-                id="email"
                 name="email"
                 type="email"
-                placeholder="Email address"
-                className={`${inputStyles} w-full`}
-                required
-              />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
+                className="bg-transparent border-b-[0.7px] py-2 transition-all duration-300 border-primary-800 outline-none  focus:border-b-2 mb-4"
+              ></input>
             </div>
-          </div>
+            <div className="flex flex-col">
+              <label htmlFor="subject">Subject</label>
+              <input
+                name="subject"
+                type="text"
+                className="bg-transparent border-b-[0.7px] py-2 transition-all duration-300 border-primary-800 outline-none  focus:border-b-2 mb-4"
+              ></input>
+            </div>
+            <div className="flex flex-col">
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                className="bg-transparent border-b-[0.7px] py-2 transition-all duration-300 border-primary-800 outline-none  focus:border-b-2 h-32 mb-4"
+              ></textarea>
+            </div>
 
-          {/* Message */}
-          <div>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Message"
-              rows={5}
-              className={`${inputStyles} w-full`}
-            />
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="w-40">
-            <Button type="primary">Submit</Button>
-          </div>
-        </form>
-      )}
-    </div>
-    
-  </div>;
+            <Button type={'solid'}>
+              <div className="flex items-center justify-center gap-2">
+                <span>
+                  <RiSendPlaneLine />
+                </span>
+                <p>Send Message</p>
+              </div>
+            </Button>
+          </form>
+        </section>
+      </div>
+    </>
+  );
 }
 
 export default Contact;

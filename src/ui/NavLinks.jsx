@@ -1,21 +1,41 @@
-import { NavLink } from "react-router"
+import { NavLink } from 'react-router';
 
 function NavLinks() {
   return (
     <>
-     <li>
-          <NavLink to={'/about'} className={({ isActive }) =>`text-lg hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400' : ''}`}>About</NavLink>
-        </li>
-        
-        <li>
+      <li>
+        <NavLink
+          to={'/about'}
+          className={({ isActive }) =>
+            `hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400' : ''}`
+          }
+        >
+          About
+        </NavLink>
+      </li>
 
-          <NavLink to={'/projects'}  className={({ isActive }) =>`text-lg  hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`}>Projects</NavLink>
-        </li>
-        <li>
-          <NavLink to={'/contact'}   className={({ isActive }) =>`text-lg  hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`}>Contact</NavLink>
-        </li> 
+      <li>
+        <NavLink
+          to={'/projects'}
+          className={({ isActive }) =>
+            ` hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`
+          }
+        >
+          Projects
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={'/contact'}
+          className={({ isActive }) =>
+            ` hover:text-blue-400 active:text-blue-400 transition-all duration-300 ${isActive ? 'text-blue-400 ' : ''}`
+          }
+        >
+          Contact
+        </NavLink>
+      </li>
     </>
-  )
+  );
 }
 
-export default NavLinks
+export default NavLinks;

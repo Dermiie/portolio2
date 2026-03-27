@@ -1,12 +1,16 @@
-function Stacks({stacks}) {
+function Stacks({ stacks }) {
   return (
-  
-     <ul className="flex flex-wrap gap-2">
+    <ul className="flex flex-wrap gap-2">
       {stacks.map((stack, index) => (
-        <li className="px-4 py-1 text-sm italic text-center bg-white rounded-md shadow-lg text-stone-400" key={index}>{stack}</li>
+        <li
+          className="px-4 py-1 text-sm italic text-center rounded-md border-[0.7px] shadow-md border-primary-900 text-primary-900"
+          key={index}
+        >
+          {stack}
+        </li>
       ))}
     </ul>
-    )
+  );
 }
 
-export default Stacks
+export default Stacks;

@@ -1,37 +1,110 @@
-import { Link } from "react-router";
-import { BiRightArrowAlt } from "react-icons/bi";
-import { ReactTyped } from "react-typed";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
+import Button from '../ui/Button';
+import { HiArrowRight, HiOutlineDownload, HiOutlineMail } from 'react-icons/hi';
+import { CiLocationOn } from 'react-icons/ci';
+import {
+  SiJavascript,
+  SiNextdotjs,
+  SiReact,
+  SiSupabase,
+  SiTailwindcss,
+  SiTypescript,
+} from 'react-icons/si';
 
+const skills = [
+  { name: 'JavaScript', icon: <SiJavascript /> },
+  { name: 'React', icon: <SiReact /> },
+  { name: 'Next.js', icon: <SiNextdotjs /> },
+  { name: 'TypeScript', icon: <SiTypescript /> },
+  { name: 'Tailwind', icon: <SiTailwindcss /> },
+  { name: 'Supabase', icon: <SiSupabase /> },
+];
 
 function Home() {
-  return <>
-  <div className="flex flex-col justify-center h-full gap-3 px-8 overflow-scroll md:flex-row md:gap-10 md:items-center ">
-    <div className="flex justify-center w-32 h-32 mb-8 overflow-hidden rounded-full md:self-center md:justify-center md:w-1/2 md:h-3/4 md:order-2 ring md:ring-2 md:ring-offset-0 ring-offset-8 ring-blue-400">
-      <img className="object-center md:self-center" src="/Demi.jpg" alt="Demi"></img>
-    </div>
-    <div className="md:w-1/2">
-      <h1 className="mb-4 text-xl font-extrabold">HI THERE 👋, I&apos;M </h1>
-      <ReactTyped strings={["DEMILADE OYENIYI"]} typeSpeed={180} backSpeed={40}className="text-2xl font-extrabold text-blue-400 "></ReactTyped>
-      <div className="mt-3">
-        <p className="w-[85%] md:w-[70%]text-lg tracking-tight">A frontend developer with an eye for clean code and user centric applications, I create seamless user interfaces that are both functional and visually compelling.</p>
-        <div className="mt-2 font-bold">
-          <Link to={'/about'} className="transition-all duration-300 hover:text-blue-400 dark:text-blue-400">Want to know more about me <span><BiRightArrowAlt         className="text-3xl font-bold text-blue-400"/></span></Link>
-        </div>   
+  return (
+    <>
+      <div className="flex flex-col gap-20">
+        <div className="relative flex flex-col min-h-screen gap-3 px-8 overflow-hidden bg-cover pt-28 md:gap-10">
+          <div className="relative flex items-center gap-2">
+            <span className="relative flex size-2">
+              <span className="inline-flex rounded-full animate-pulseSlow size-2 bg-primary-600"></span>
+            </span>
+            <span className="text-sm">Available for work</span>
+          </div>
+          <div className="flex flex-col items-start">
+            <p>FRONTEND DEVELOPER</p>
+            <h1 className="font-extrabold font-display text-huge text-primary-900">
+              Demilade
+            </h1>
+            <h1 className="font-extrabold font-display text-huge text-primary-600">
+              Oyeniyi
+            </h1>
+          </div>
+
+          <div className="grid grid-cols-2">
+            <div className="flex flex-col gap-4">
+              <p className="w-[85%] md:w-[70%] text-lg tracking-tight">
+                A frontend developer with an eye for clean code and user centric
+                applications, I create seamless user interfaces that are both
+                functional and visually compelling.
+              </p>
+              <p className="flex gap-2">
+                <span>
+                  <CiLocationOn size={24} className=" text-primary-600" />
+                </span>
+                Based in Nigeria - Open to remote opportunities
+              </p>
+            </div>
+            <div className="flex items-end justify-end">
+              <div className="flex items-end gap-2">
+                <Button type={'solid'}>
+                  <div className="flex items-center justify-center gap-2">
+                    <p>View Projects</p>
+                    <span>
+                      <HiArrowRight></HiArrowRight>
+                    </span>
+                  </div>
+                </Button>
+                <Button type={'primary'}>
+                  {' '}
+                  <div className="flex items-center justify-center gap-2">
+                    <span>
+                      <HiOutlineDownload></HiOutlineDownload>
+                    </span>
+                    <p>Resume</p>
+                  </div>
+                </Button>
+                <Button type={'primary'}>
+                  <div className="flex items-center justify-center gap-2">
+                    <span>
+                      <HiOutlineMail></HiOutlineMail>
+                    </span>
+                    <p>Contact Me</p>
+                  </div>
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute overflow-hidden border-t-[0.7px] pt-6 border-primary-900 bottom-10">
+            <div className="flex whitespace-nowrap animate-scroll">
+              {[...skills, ...skills, ...skills].map((skill, i) => (
+                <div key={i} className="flex items-center gap-2 px-6 shrink-0">
+                  <span className="text-primary-600">{skill.icon}</span>
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <About />
+        <Projects />
+        <Contact />
       </div>
-    </div>
-
-   
-  </div>
-  <div className="flex flex-col gap-20 pb-20">
-
-    <About />
-  <Projects />
-  <Contact />
-  </div>
-  </>
+    </>
+  );
 }
 
 export default Home;
