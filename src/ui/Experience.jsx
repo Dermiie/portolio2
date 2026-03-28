@@ -29,7 +29,7 @@ function Experience() {
       {experiences.map((experience, i) => (
         <div
           key={i}
-          className="md:grid group flex flex-col gap-4 justify-between transition-all duration-500 md:grid-cols-[1fr_1.5fr_1fr] border-b-[0.7px] rounded border-primary-800 md:px-4 py-6 hover:bg-primary-100/90"
+          className="md:grid group flex flex-col gap-4 justify-between transition-all duration-500 md:grid-cols-[1fr_1.5fr_1fr] border-b-[0.7px] rounded border-primary-800 md:px-4 py-6 hover:bg-primary-100/90 dark:hover:bg-primary-900/50"
         >
           <h2 className="text-lg font-medium transition-all duration-300 font-display group-hover:text-primary-600">
             {experience.role}

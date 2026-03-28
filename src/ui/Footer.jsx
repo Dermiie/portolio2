@@ -10,7 +10,7 @@ function Footer() {
           Available for opportunites
         </p>
         <main>
-          <p className="text-3xl font-extrabold text-center md:text-6xl font-display text-primary-900">
+          <p className="text-3xl font-extrabold text-center md:text-6xl font-display text-primary-900 dark:text-primary-800">
             Let&apos;s build <br /> something <br />
             <span className="text-primary-600">remarkable</span>
           </p>

@@ -1,5 +1,6 @@
 import { BiLogoGithub, BiLogoInstagram, BiLogoLinkedin } from 'react-icons/bi';
 import { Link } from 'react-router';
+import ThemeToggle from './ThemeToggle';
 
 function SocialLinks() {
   return (
@@ -23,6 +24,8 @@ function SocialLinks() {
       >
         <BiLogoGithub />
       </Link>
+
+      <ThemeToggle></ThemeToggle>
     </ul>
   );
 }

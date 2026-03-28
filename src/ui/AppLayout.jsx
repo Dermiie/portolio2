@@ -4,14 +4,14 @@ import Footer from './Footer';
 
 function AppLayout() {
   return (
-    <div className="grid grid-rows-[auto_1fr_auto] ">
-      <Header></Header>
+    <div className="grid grid-rows-[auto_1fr_auto]">
+      <Header />
 
       <main className="w-[90%] mx-auto scrollbar-hide overflow-hidden">
-        <Outlet></Outlet>
+        <Outlet />
       </main>
 
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }

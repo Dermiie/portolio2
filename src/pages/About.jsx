@@ -14,7 +14,7 @@ function About() {
     <div className="flex flex-col gap-24 pt-28">
       <div className="flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-0">
         <div className="flex flex-col md:col-span-2">
-          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start">
+          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start dark:text-primary-800">
             Bringing designs to life{' '}
             <span className="block text-primary-600">
               with code and creativity!
@@ -37,7 +37,7 @@ function About() {
           </p>
         </div>
         <div>
-          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 text-start">
+          <h3 className="mb-4 text-2xl font-bold tracking-tight md:text-4xl font-display text-primary-900 dark:text-primary-800 text-start">
             Core Expertise
           </h3>
           <ul className="space-y-5">
@@ -52,7 +52,7 @@ function About() {
         </div>
       </div>
       <div className="flex flex-col">
-        <h3 className="mb-4 text-xl font-bold tracking-tight md:text-2xl font-display text-primary-900 text-start">
+        <h3 className="mb-4 text-xl font-bold tracking-tight md:text-2xl font-display dark:text-primary-800 text-primary-900 text-start">
           Technologies
         </h3>
 

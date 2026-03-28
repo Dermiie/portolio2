@@ -43,7 +43,7 @@ function Contact() {
       <div className="flex flex-col w-full gap-12 md:grid md:grid-cols-2 pt-28">
         <section className="flex flex-col gap-6 text-start">
           <header>
-            <p className="text-3xl font-extrabold font-display md:text-6xl lg:text-6xl text-primary-900">
+            <p className="text-3xl font-extrabold font-display md:text-6xl lg:text-6xl text-primary-900 dark:text-primary-800">
               Let&apos;s
             </p>
             <p className="text-3xl font-extrabold font-display md:text-6xl lg:text-6xl text-primary-600">
@@ -87,7 +87,7 @@ function Contact() {
         </section>
         <section>
           <header className="mb-4">
-            <h1 className="mb-2 text-xl font-bold tracking-tight font-display text-primary-900 text-start">
+            <h1 className="mb-2 text-xl font-bold tracking-tight font-display text-primary-900 dark:text-primary-800 text-start">
               Send a message
             </h1>
             <p>Fill in the details, i&apos;ll get back to you</p>

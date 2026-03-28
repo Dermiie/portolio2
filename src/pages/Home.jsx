@@ -12,6 +12,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
+import { useNavigate } from 'react-router';
 
 const skills = [
   { name: 'JavaScript', icon: <SiJavascript /> },
@@ -23,6 +24,8 @@ const skills = [
 ];
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex flex-col gap-10 md:gap-20 pt-28 md:pt-0">
@@ -35,7 +38,7 @@ function Home() {
           </div>
           <div className="flex flex-col items-start text-sm md:text-base">
             <p>FRONTEND DEVELOPER</p>
-            <h1 className="text-4xl font-extrabold font-display md:text-6xl lg:text-huge text-primary-900">
+            <h1 className="text-4xl font-extrabold font-display md:text-6xl lg:text-huge text-primary-900 dark:text-primary-800">
               Demilade
             </h1>
             <h1 className="text-4xl font-extrabold font-display md:text-6xl lg:text-huge text-primary-600">
@@ -59,7 +62,7 @@ function Home() {
             </div>
 
             <div className="flex flex-col gap-2 md:flex-row md:items-end lg:justify-end">
-              <Button type={'solid'}>
+              <Button type={'solid'} to={'/projects'}>
                 <div className="flex items-center justify-center gap-2">
                   <p>View Projects</p>
                   <span>
@@ -76,7 +79,7 @@ function Home() {
                   <p>Resume</p>
                 </div>
               </Button>
-              <Button type={'primary'}>
+              <Button type={'primary'} to={'/contact'}>
                 <div className="flex items-center justify-center gap-2">
                   <span>
                     <HiOutlineMail></HiOutlineMail>

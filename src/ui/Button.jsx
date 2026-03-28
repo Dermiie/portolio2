@@ -5,7 +5,7 @@ function Button({ children, disabled, to, type, onClick }) {
     'font-display border border-primary-900 font-medium flex items-center justify-center tracking-wide transition-colors duration-300 rounded-md hover:text-primary-600 hover:border-primary-600 px-4 focus:bg-primary-600 focus:outline-none  disabled:cursor-not-allowed';
 
   const styles = {
-    primary: base + 'px-4 py-2 md:px-6 md:py-3 text-primary-900',
+    primary: base + 'px-4 py-2 md:px-6 md:py-3',
 
     solid:
       base +
@@ -15,7 +15,7 @@ function Button({ children, disabled, to, type, onClick }) {
 
     smallSolid:
       base +
-      'px-4 py-1 md:px-5 md:py-2 text-xs bg-primary-900 text-primary-200 hover:bg-primary-600 hover:text-primary-900',
+      'px-4 py-1 md:px-5 md:py-2 text-xs bg-primary-900 text-primary-200 hover:bg-primary-600 hover:text-primary-900 ',
 
     round: base + 'px-2.5 py-1 md:px-3.5 md:py-2 text-sm',
 
