@@ -25,17 +25,20 @@ function Footer() {
                 </span>
               </div>
             </Button>
-            <a href="/Demilade_Oyeniyi_Resume.pdf" download>
-              <Button type={'primary'}>
-                {' '}
-                <div className="flex items-center justify-center gap-2">
-                  <span>
-                    <HiOutlineDownload></HiOutlineDownload>
-                  </span>
-                  <p>Download CV</p>
-                </div>
-              </Button>
-            </a>
+
+            <Button
+              type={'primary'}
+              href="/Demilade_Oyeniyi_Resume.pdf"
+              download
+            >
+              {' '}
+              <div className="flex items-center justify-center gap-2">
+                <span>
+                  <HiOutlineDownload></HiOutlineDownload>
+                </span>
+                <p>Download CV</p>
+              </div>
+            </Button>
           </div>
         </div>
         <footer className="flex justify-between items-center py-8 px-4 md:px-12 border-t-[0.8px] border-primary-800 w-full">

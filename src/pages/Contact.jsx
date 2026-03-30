@@ -97,16 +97,14 @@ function Contact() {
           </ul>
 
           <div>
-            <a href="/Demilade_Oyeniyi_Resume.pdf" download>
-              <Button type={'solid'}>
-                <div className="flex items-center justify-center gap-2">
-                  <span>
-                    <HiOutlineDownload></HiOutlineDownload>
-                  </span>
-                  <p>Download CV</p>
-                </div>
-              </Button>
-            </a>
+            <Button type={'solid'} href="/Demilade_Oyeniyi_Resume.pdf" download>
+              <div className="flex items-center justify-center gap-2">
+                <span>
+                  <HiOutlineDownload></HiOutlineDownload>
+                </span>
+                <p>Download CV</p>
+              </div>
+            </Button>
           </div>
         </section>
         <section>

@@ -67,14 +67,18 @@ function Home() {
                   </span>
                 </div>
               </Button>
-              <a href="/Demilade_Oyeniyi_Resume.pdf" download>
-                <Button type="primary">
-                  <div className="flex items-center justify-center gap-2">
-                    <HiOutlineDownload />
-                    <p>Resume</p>
-                  </div>
-                </Button>
-              </a>
+
+              <Button
+                type="primary"
+                href="/Demilade_Oyeniyi_Resume.pdf"
+                download
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <HiOutlineDownload />
+                  <p>Resume</p>
+                </div>
+              </Button>
+
               <Button type={'primary'} to={'/contact'}>
                 <div className="flex items-center justify-center gap-2">
                   <span>
