@@ -12,7 +12,6 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from 'react-icons/si';
-import { useNavigate } from 'react-router';
 
 const skills = [
   { name: 'JavaScript', icon: <SiJavascript /> },
@@ -24,8 +23,6 @@ const skills = [
 ];
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="flex flex-col gap-10 md:gap-20 pt-28 md:pt-0">
@@ -70,15 +67,14 @@ function Home() {
                   </span>
                 </div>
               </Button>
-              <Button type={'primary'}>
-                {' '}
-                <div className="flex items-center justify-center gap-2">
-                  <span>
-                    <HiOutlineDownload></HiOutlineDownload>
-                  </span>
-                  <p>Resume</p>
-                </div>
-              </Button>
+              <a href="/Demilade_Oyeniyi_Resume.pdf" download>
+                <Button type="primary">
+                  <div className="flex items-center justify-center gap-2">
+                    <HiOutlineDownload />
+                    <p>Resume</p>
+                  </div>
+                </Button>
+              </a>
               <Button type={'primary'} to={'/contact'}>
                 <div className="flex items-center justify-center gap-2">
                   <span>

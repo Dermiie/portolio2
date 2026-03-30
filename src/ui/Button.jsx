@@ -1,10 +1,12 @@
 import { Link } from 'react-router';
 
-function Button({ children, disabled, to, type, onClick }) {
+function Button({ children, disabled, to, type, onClick, className }) {
   const base =
     'font-display border border-primary-900 font-medium flex items-center justify-center tracking-wide transition-colors duration-300 rounded-md hover:text-primary-600 hover:border-primary-600 px-4 focus:bg-primary-600 focus:outline-none  disabled:cursor-not-allowed';
 
   const styles = {
+    noStyle: className,
+
     primary: base + 'px-4 py-2 md:px-6 md:py-3',
 
     solid:
@@ -32,7 +34,7 @@ function Button({ children, disabled, to, type, onClick }) {
 
   if (onClick)
     return (
-      <button onClick={onClick} className={styles[type]}>
+      <button onClick={onClick} className={styles[type]} disabled={disabled}>
         {children}
       </button>
     );
