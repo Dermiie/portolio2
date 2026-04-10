@@ -14,7 +14,7 @@ const experiences = [
     role: 'Frontend Developer Intern',
     type: 'SIWES',
     company: 'RenMoney MFB',
-    duration: 'June 2022 - October 2022', // add if you have it
+    duration: 'Jun 2022 - Oct 2022', // add if you have it
     responsibilities: [
       'Improved proficiency in JavaScript and React through hands-on development.',
       'Collaborated effectively with team members on real-world projects.',
@@ -31,9 +31,14 @@ function Experience() {
           key={i}
           className="md:grid group flex flex-col gap-4 justify-between transition-all duration-500 md:grid-cols-[1fr_1.5fr_1fr] border-b-[0.7px] rounded border-primary-800 md:px-4 py-6 hover:bg-primary-100/90 dark:hover:bg-primary-900/50"
         >
-          <h2 className="text-lg font-medium transition-all duration-300 font-display group-hover:text-primary-600">
-            {experience.role}
-          </h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-medium transition-all duration-300 font-display group-hover:text-primary-600">
+              {experience.role} <br />{' '}
+              <span className="text-sm font-normal">{experience.company}</span>
+            </h2>
+
+            <p className="text-xs text-end md:hidden">{experience.duration}</p>
+          </div>
 
           <ul className="space-y-2 md:space-y-3">
             {experience.responsibilities.map((res, i) => (
@@ -43,7 +48,9 @@ function Experience() {
             ))}
           </ul>
 
-          <p className="text-end">{experience.duration}</p>
+          <p className="hidden text-sm text-end md:block">
+            {experience.duration}
+          </p>
         </div>
       ))}
     </>

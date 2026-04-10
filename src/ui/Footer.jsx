@@ -43,7 +43,7 @@ function Footer() {
         </div>
         <footer className="flex justify-between items-center py-8 px-4 md:px-12 border-t-[0.8px] border-primary-800 w-full">
           <div>
-            <p> &copy;2026 Demilade Oyeniyi 🧙‍♂️</p>
+            <p> &copy;2026 Demilade Oyeniyi</p>
           </div>
           <SocialLinks />
         </footer>

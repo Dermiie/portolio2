@@ -85,7 +85,7 @@ function Contact() {
               >
                 <div className="group-hover:text-primary-600">{data.icon}</div>
                 <div className="text-start">
-                  <p>{data.name}</p>
+                  <p className="hidden md:block">{data.name}</p>
                   <p>{data.value}</p>
                 </div>
 
