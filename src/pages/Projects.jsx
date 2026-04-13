@@ -7,6 +7,24 @@ import { HiArrowRight } from 'react-icons/hi';
 
 const projects = [
   {
+    title: 'WILD OASIS',
+    description:
+      'This web application is built with React.js, Tailwind CSS, and modern data management tools, A resort management dashboard that allows users to manage cabins, bookings, and guests through a clean, data-driven interface',
+    image: '/the-wild-oasis.png',
+    alt: 'the-wild-oasis-app',
+    live: 'https://the-wild-oasis-demii.vercel.app/',
+    github: 'https://github.com/Dermiie/The-Wild-Oasis-Demi',
+    stacks: [
+      'React',
+      'TailwindCSS',
+      'Tanstack query',
+      'React-router',
+      'supabase',
+    ],
+    object: 'contain',
+  },
+
+  {
     title: 'FAST PIZZA APP',
     description:
       'This simple web application is built with React.js, Tailwind CSS, and React Redux for global state management. It enables customers to order pizzas, set priorities on their orders, and have them delivered efficiently.',
@@ -17,6 +35,7 @@ const projects = [
     stacks: ['React', 'TailwindCSS', 'React-redux', 'React-router'],
     object: 'contain',
   },
+
   {
     title: 'REST COUNTRIES API',
     description:
