@@ -9,44 +9,73 @@ const techStack = {
     },
     {
       name: 'Next.js',
-      note: 'Creating performant, full-stack React applications.',
+      note: 'Building performant and full-stack React applications.',
     },
     {
       name: 'Tailwind CSS',
-      note: 'Styling interfaces quickly with utility-first CSS.',
+      note: 'Styling responsive interfaces with utility-first CSS.',
     },
     {
       name: 'Framer Motion',
-      note: 'Adding smooth animations and interactions.',
+      note: 'Creating smooth animations and interactive experiences.',
     },
   ],
 
-  'Data & Integration': [
+  'Backend & APIs': [
     {
-      name: 'React Query',
-      note: 'Managing server state and data fetching efficiently.',
+      name: 'Node.js',
+      note: 'Building scalable server-side applications and services.',
+    },
+    {
+      name: 'Express.js',
+      note: 'Developing REST APIs and backend application services.',
     },
     {
       name: 'REST APIs',
-      note: 'Integrating and communicating with external services.',
+      note: 'Designing and integrating client-server communication.',
     },
     {
-      name: 'Supabase',
-      note: 'Handling backend services like database and authentication.',
+      name: 'Socket.IO',
+      note: 'Building real-time, event-driven communication features.',
     },
   ],
 
-  'Engineering & Workflow': [
+  'Data & State Management': [
     {
-      name: 'JavaScript',
-      note: 'Writing core application logic and interactive functionality.',
+      name: 'MongoDB',
+      note: 'Working with document-based databases and application data.',
     },
+    {
+      name: 'Mongoose',
+      note: 'Modeling MongoDB data and managing database operations.',
+    },
+    {
+      name: 'React Query',
+      note: 'Managing server state, caching, and asynchronous data.',
+    },
+    {
+      name: 'Supabase',
+      note: 'Working with database, authentication, and backend services.',
+    },
+  ],
+
+  'Languages & Workflow': [
     {
       name: 'TypeScript',
-      note: 'Writing type-safe and scalable JavaScript code.',
+      note: 'Writing type-safe and maintainable application code.',
     },
-    { name: 'Git', note: 'Tracking changes and managing code versions.' },
-    { name: 'GitHub', note: 'Collaborating and hosting code repositories.' },
+    {
+      name: 'JavaScript',
+      note: 'Building application logic and interactive functionality.',
+    },
+    {
+      name: 'Git',
+      note: 'Managing versions and collaborative development workflows.',
+    },
+    {
+      name: 'GitHub',
+      note: 'Hosting repositories and collaborating through Git workflows.',
+    },
   ],
 };
 
@@ -72,12 +101,28 @@ function Technologies() {
       <div className="border-b-[0.8px] border-primary-800 p-6">
         <header className="flex items-center justify-start gap-4 mb-6 font-semibold uppercase font-display">
           <span>
-            <TbDatabase size={24} className="text-primary-600" />
+            <HiOutlineServer size={24} className="text-primary-600" />
           </span>
-          Data & Integration
+          Backend & APIs
         </header>
         <ul className="flex flex-col gap-2">
-          {techStack['Data & Integration'].map((s, i) => (
+          {techStack['Backend & APIs'].map((s, i) => (
+            <li key={i} className="pl-6 border-l-2 border-primary-200 ">
+              <h2>{s.name}</h2>
+              <h2 className="text-sm">{s.note}</h2>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="border-b-[0.8px] border-primary-800 p-6">
+        <header className="flex items-center justify-start gap-4 mb-6 font-semibold uppercase font-display">
+          <span>
+            <TbDatabase size={24} className="text-primary-600" />
+          </span>
+          Data & State Management
+        </header>
+        <ul className="flex flex-col gap-2">
+          {techStack['Data & State Management'].map((s, i) => (
             <li key={i} className="pl-6 border-l-2 border-primary-200 ">
               <h2>{s.name}</h2>
               <h2 className="text-sm">{s.note}</h2>
@@ -93,7 +138,7 @@ function Technologies() {
           Engineering & Workflow
         </header>
         <ul className="flex flex-col gap-2">
-          {techStack['Engineering & Workflow'].map((s, i) => (
+          {techStack['Languages & Workflow'].map((s, i) => (
             <li key={i} className="pl-6 border-l-2 border-primary-200 ">
               <h2>{s.name}</h2>
               <h2 className="text-sm">{s.note}</h2>

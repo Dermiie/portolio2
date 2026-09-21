@@ -7,6 +7,24 @@ import { HiArrowRight } from 'react-icons/hi';
 
 const projects = [
   {
+    title: 'CONNECTIFY',
+    description:
+      'This web application is built with React.js, TypeScript, Node.js, Express.js, MongoDB, and Socket.IO, a social discovery platform that allows users to create profiles, discover and connect with other users, interact through real-time messaging, and manage their connections through a clean, responsive interface.e',
+    image: '/connectify.png',
+    alt: 'the-wild-oasis-app',
+    live: 'https://connecti-web.onrender.com/home',
+    github: 'https://github.com/MojolaoluwaGafar/Connectify',
+    stacks: [
+      'React',
+      'TailwindCSS',
+      'React-router',
+      'Express.js',
+      'MongoDB',
+      'Socket.io',
+    ],
+    object: 'contain',
+  },
+  {
     title: 'WILD OASIS',
     description:
       'This web application is built with React.js, Tailwind CSS, and modern data management tools, A resort management dashboard that allows users to manage cabins, bookings, and guests through a clean, data-driven interface',
@@ -39,12 +57,19 @@ const projects = [
   {
     title: 'REST COUNTRIES API',
     description:
-      'The REST Countries API web application is a project that allows users to explore detailed information about countries around the world using data provided by the REST Countries API.',
+      'A country exploration web application that demonstrates foundational skills in API integration, asynchronous data handling, loading and error states, dynamic filtering, and responsive, data-driven styling.',
     image: '/rest-countries-image.webp',
-    alt: 'usepopcorn-app',
-    live: 'https://demi-rest-countries-api.vercel.app/',
-    github: 'https://github.com/Dermiie/RestCountriesApi',
-    stacks: ['React', 'TailwindCSS', 'Fetch-API', 'React-router'],
+    alt: 'Countries app',
+    live: 'https://rest-countries-api-demi.vercel.app/',
+    github: 'https://github.com/Dermiie/RestCountriesApiDemi',
+    stacks: [
+      'HTML',
+      'CSS',
+      'Javascript',
+      'TailwindCSS',
+      'Fetch-API',
+      'React-router',
+    ],
     object: 'cover',
   },
   {

@@ -4,9 +4,12 @@ import Technologies from '../ui/Technologies';
 const expertise = [
   { no: '01', point: 'Frontend Web Development' },
   { no: '02', point: 'React/Next.js Applications' },
-  { no: '03', point: 'TypeScript and Mordern JavaScript' },
-  { no: '04', point: 'User Experience Centric' },
-  { no: '05', point: 'Teamwork and Collaborations' },
+  { no: '03', point: 'TypeScript and Modern JavaScript' },
+  { no: '04', point: 'REST API Integration' },
+  { no: '05', point: 'Node.js/Express.js Development' },
+  { no: '06', point: 'MongoDB/Mongoose' },
+  { no: '07', point: 'User-Centric Development' },
+  { no: '08', point: 'Teamwork and Collaboration' },
 ];
 
 function About() {
@@ -31,9 +34,10 @@ function About() {
             I&apos;m Demi, a frontend developer specializing in building
             scalable, intuitive, and high-quality web applications.
             <br />
-            With a solid foundation in Web development, I develop responsive and
-            performance-driven interfaces designed to deliver seamless user
-            experiences.
+            With a strong foundation in React, TypeScript, and Next.js, I build
+            responsive, performance-driven interfaces and integrate REST APIs
+            and real-time services using Node.js, Express.js, and MongoDB to
+            deliver seamless end-to-end experiences.
           </p>
         </div>
         <div>

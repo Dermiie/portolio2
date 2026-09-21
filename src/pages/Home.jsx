@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
       <div className="flex flex-col gap-10 md:gap-20 pt-28 md:pt-0">
-        <div className="relative flex flex-col gap-3 pt-8 overflow-hidden min-h-[calc(100vh-70px)] bg-cover md:px-8 md:pt-28 md:gap-10">
+        <div className="relative flex flex-col gap-4 pt-8 overflow-hidden min-h-[calc(100vh-70px)] md:px-8 md:pt-28 md:gap-10">
           <div className="relative flex items-center gap-2">
             <span className="flex size-2">
               <span className="inline-flex rounded-full animate-pulseSlow size-2 bg-primary-600"></span>
@@ -45,16 +45,17 @@ function Home() {
 
           <div className="text-sm lg:grid lg:grid-cols-2">
             <div className="flex flex-col gap-4 mb-6 lg:mb-0">
-              <p className="w-[85%] lg:w-[70%] md:text-lg tracking-tight">
-                A frontend developer with an eye for clean code and user centric
-                applications, I create seamless user interfaces that are both
-                functional and visually compelling.
+              <p className="w-[85%] lg:w-[70%] md:text-md tracking-tight">
+                Frontend Engineer building responsive, user-centric applications
+                with React, TypeScript, and Next.js, with growing full-stack
+                experience across Node.js, Express.js, MongoDB, REST APIs, and
+                real-time technologies.
               </p>
               <p className="flex gap-2">
                 <span>
                   <CiLocationOn size={24} className=" text-primary-600" />
                 </span>
-                Based in Nigeria - Open to remote opportunities
+                Based in Nigeria - Open to remote and onsite opportunities
               </p>
             </div>
 
@@ -70,7 +71,7 @@ function Home() {
 
               <Button
                 type="primary"
-                href="/Demilade_Oyeniyi_Resume.pdf"
+                href="/Demilade_Oyeniyi_Resume_.pages"
                 download
               >
                 <div className="flex items-center justify-center gap-2">
